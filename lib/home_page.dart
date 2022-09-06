@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gtc_customer/ui/widgets/logo_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,8 +11,8 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Fast eat'),
       ),
-      body: Center(
-        child: Text('hello_world'.tr),
+      body: const Center(
+        child: LogoWidget(),
       ),
     );
   }
