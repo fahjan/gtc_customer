@@ -11,8 +11,8 @@ class LocalizationApp extends Translations{
 
   @override
   Map<String, Map<String, String>> get keys => {
-    'ar': Ar.arEg,
-    'en': En.enUs,
+    'ar': arEg,
+    'en': enUs,
   };
 
 }
