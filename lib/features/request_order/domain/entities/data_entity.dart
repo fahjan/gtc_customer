@@ -1,16 +1,13 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:equatable/equatable.dart';
 
-
-
-class DataEntity {
+class DataEntity extends Equatable {
   final int id;
-  @JsonKey(name: 'restaurant_name')
   final String restaurantName;
   final String logo;
 
-  DataEntity(
+  const DataEntity(
       {required this.id, required this.restaurantName, required this.logo});
-    
+
   @override
   bool get stringify => true;
 

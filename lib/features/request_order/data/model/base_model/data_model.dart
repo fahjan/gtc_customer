@@ -1,16 +1,17 @@
-import 'package:equatable/equatable.dart';
-import 'package:gtc_customer/features/request_order/domain/entities/data_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'data_model.g.dart';
+part 'code_generated/data_model.g.dart';
 
 @JsonSerializable()
-class DataModel extends DataEntity {
+class DataModel {
+  final int id;
+  @JsonKey(name: 'restaurant_name')
+  final String restaurantName;
+  final String logo;
 
-  DataModel({required super.id, required super.restaurantName, required super.logo});
+  const DataModel({required this.id, required this.restaurantName, required this.logo});
 
   factory DataModel.fromJson(Map<String, dynamic> json) => _$DataModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$DataModelToJson(this);
-  
 }

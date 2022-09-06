@@ -1,9 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:gtc_customer/core/constants/strings_app.dart';
-import 'package:gtc_customer/core/storages/remote_storage/remote_connections_abstract.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-class RemoteConnectionDio extends RemoteConnectionsAbstract<Dio> {
+class RemoteConnectionDio {
   late Dio _dio;
 
   static RemoteConnectionDio? _instance;
@@ -16,7 +15,7 @@ class RemoteConnectionDio extends RemoteConnectionsAbstract<Dio> {
       ),
     );
     _dio.interceptors.add(PrettyDioLogger());
-// customization
+
     _dio.interceptors.add(PrettyDioLogger(
         requestHeader: true,
         requestBody: true,
@@ -31,6 +30,5 @@ class RemoteConnectionDio extends RemoteConnectionsAbstract<Dio> {
     return _instance ??= RemoteConnectionDio._();
   }
 
-  @override
-  Dio get remoteConnection => _dio;
+  Dio get dio => _dio;
 }
