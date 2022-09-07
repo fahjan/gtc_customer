@@ -1,7 +1,7 @@
 
 
 
-import 'package:gtc_customer/features/request_order/domain/repositories/request_order_repositoriy.dart';
+import '../repositories/request_order_repositoriy.dart';
 
 class MakeOrderUsecase {
   RequestOrderRepositoriy _requestOrderRepositoriy;

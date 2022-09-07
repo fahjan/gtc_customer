@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gtc_customer/core/constants/colors_app.dart';
-import 'package:gtc_customer/core/constants/sizes_app.dart';
-import 'package:gtc_customer/features/request_order/domain/entities/data_entity.dart';
-import 'package:gtc_customer/features/request_order/presentation/controller/order_request_controller.dart';
+import '../../../../core/constants/colors_app.dart';
+import '../../../../core/constants/sizes_app.dart';
+import '../../domain/entities/data_entity.dart';
+import '../controller/order_request_controller.dart';
 
 class OrderRequestPage extends GetView<OrderRequestController> {
   const OrderRequestPage({super.key});

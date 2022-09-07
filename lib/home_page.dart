@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gtc_customer/core/constants/sizes_app.dart';
-import 'package:gtc_customer/core/routes/routes_app.dart';
+import 'core/constants/sizes_app.dart';
+import 'core/routes/routes_app.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

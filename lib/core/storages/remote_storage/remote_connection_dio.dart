@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:gtc_customer/core/constants/strings_app.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+
+import '../../constants/strings_app.dart';
 
 class RemoteConnectionDio {
   late Dio _dio;

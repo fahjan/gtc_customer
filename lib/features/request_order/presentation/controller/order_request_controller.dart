@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
-import 'package:gtc_customer/core/exceptions/failure.dart';
-import 'package:gtc_customer/features/request_order/domain/entities/data_entity.dart';
-import 'package:gtc_customer/features/request_order/domain/usecases/list_data_usecases.dart';
-import 'package:gtc_customer/features/request_order/domain/usecases/make_order_usecase.dart';
+import '../../../../core/exceptions/failure.dart';
+import '../../domain/entities/data_entity.dart';
+import '../../domain/usecases/list_data_usecases.dart';
+import '../../domain/usecases/make_order_usecase.dart';
 
 class OrderRequestController extends GetxController with StateMixin {
   final ListDataUsecases _listDataUsecase;
