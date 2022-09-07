@@ -4,10 +4,10 @@ abstract class Failure extends Equatable{}
 
 class ServerNotAvaiableFailure extends Failure {
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class InternetNotAvaiableFailure extends Failure {
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
