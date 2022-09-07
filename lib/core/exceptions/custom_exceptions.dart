@@ -1,3 +1,3 @@
-class ServerNotAvaiableException extends FormatException {}
+class ServerNotAvaiableException implements Exception {}
 
-class InternetNotAvaiableException extends FormatException {}
+class InternetNotAvaiableException implements Exception {}

@@ -11,16 +11,25 @@ class OrderRequestPage extends GetView<OrderRequestController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder(
-        future: controller.getListOfData(),
-        builder: (context, snapshot) => controller.obx(
-          (state) {
-            List<DataEntity> listOfDataEntity = (state as List<DataEntity>);
-            return ListView.builder(
+      body: Obx(() {
+        if (controller.listOfDataEntity.isEmpty &&
+            controller.isLoading.isTrue) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        } else if (controller.listOfDataEntity.isEmpty &&
+            controller.isLoading.isFalse) {
+          return Center(  
+            child: Text(controller.message),
+          );
+        } else if (controller.listOfDataEntity.isNotEmpty) {
+          return RefreshIndicator(
+            onRefresh: controller.getListOfData,
+            child: ListView.builder(
               prototypeItem: const SizedBox(
                 height: 200,
               ),
-              itemCount: listOfDataEntity.length,
+              itemCount: controller.listOfDataEntity.length,
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
@@ -38,12 +47,12 @@ class OrderRequestPage extends GetView<OrderRequestController> {
                     child: Stack(
                       fit: StackFit.expand,
                       children: [
-                        Image.network(listOfDataEntity[index].logo),
+                        Image.network(controller.listOfDataEntity[index].logo),
                         Positioned(
                           bottom: 10,
                           left: 10,
                           child: Text(
-                            listOfDataEntity[index].restaurantName,
+                            controller.listOfDataEntity[index].restaurantName,
                             style: TextStyle(
                               color: ColorsApp.primary,
                               fontSize: SizesApp.sp20,
@@ -55,20 +64,12 @@ class OrderRequestPage extends GetView<OrderRequestController> {
                   ),
                 );
               },
-            );
-          },
-          onError: (error) {
-            Get.snackbar('Error', error ?? '');
-
-            return Center(
-              child: Text(error ?? ''),
-            );
-          },
-          onLoading: const Center(
-            child: CircularProgressIndicator(),
-          ),
-        ),
-      ),
+            ),
+          );
+        } else {
+          return const Center(child: Text('Unknow data'));
+        }
+      }),
     );
   }
 }

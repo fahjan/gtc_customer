@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 class Helpers {
@@ -8,5 +10,10 @@ class Helpers {
     }
 
     return false;
+  }
+
+  static StreamSubscription<ConnectivityResult> getConnectionListener(
+      void Function(ConnectivityResult)? onData) {
+    return Connectivity().onConnectivityChanged.listen(onData);
   }
 }

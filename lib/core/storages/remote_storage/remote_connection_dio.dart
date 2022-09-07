@@ -15,16 +15,13 @@ class RemoteConnectionDio {
         contentType: StringsApp.contentType,
       ),
     );
-    _dio.interceptors.add(PrettyDioLogger());
 
-    _dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+    // _dio.interceptors.add(PrettyDioLogger(
+    //     requestHeader: true,
+    //     responseHeader: false,
+    //     responseBody : false,
+    //     error: true,
+    //     maxWidth: 90));
   }
 
   factory RemoteConnectionDio() {

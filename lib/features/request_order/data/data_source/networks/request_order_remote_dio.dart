@@ -8,7 +8,7 @@ import '../../model/base_model/data_model.dart';
 
 class RequestOrderRemoteDio extends RequestOrderRemoteAbstract {
   
-  RemoteConnectionDio _remote;
+  final RemoteConnectionDio _remote;
   RequestOrderRemoteDio(this._remote);
 
   @override
