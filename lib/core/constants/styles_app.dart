@@ -1,6 +1,1 @@
-
-
-class StylesApp{
-
-  
-}
+class StylesApp {}

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'core/constants/sizes_app.dart';
+import 'core/routes/routes_app.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,7 +13,14 @@ class HomePage extends StatelessWidget {
         title: const Text('Fast eat'),
       ),
       body: Center(
-        child: Text('hello_world'.tr),
+        child: InkWell(
+          onTap: () {
+            Get.toNamed(RoutesApp.orderRequestPage);
+          },
+          child: Text('click_here'.tr,style: TextStyle(
+            fontSize: SizesApp.sp38,
+          ),),
+        ),
       ),
     );
   }
