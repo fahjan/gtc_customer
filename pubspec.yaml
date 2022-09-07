@@ -43,6 +43,7 @@ dependencies:
   json_annotation: ^4.6.0
   dartz: ^0.10.1
   equatable: ^2.0.5
+  connectivity_plus: ^2.3.6+1
 
 dev_dependencies:
   flutter_test:

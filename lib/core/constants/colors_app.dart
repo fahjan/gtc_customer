@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorsApp {
-  static late Color primary; // TODO (Team member): assign color
+  static Color primary = const Color(0xFF56E6D2);
   static late Color secondary; // TODO (Team member): assign color
   static late Color success; // TODO (Team member): assign color
   static late Color danger; // TODO (Team member): assign color

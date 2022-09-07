@@ -18,7 +18,7 @@ class RequestOrderRemoteDio extends RequestOrderRemoteAbstract {
     var response =   await _remote.dio.get(StringsApp.marchatsPath);
 
     if(response.statusCode!=200){
-      throw ServiceNotAvaiableException();
+      throw ServerNotAvaiableException();
     }
 
     return BaseModel.fromJson(response.data).data;

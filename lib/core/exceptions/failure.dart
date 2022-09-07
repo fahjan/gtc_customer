@@ -1,3 +1,5 @@
 abstract class Failure {}
 
-class ServiceNotAvaiableFailure extends Failure {}
+class ServerNotAvaiableFailure extends Failure {}
+
+class InternetNotAvaiableFailure extends Failure {}
