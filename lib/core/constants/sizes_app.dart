@@ -5,6 +5,7 @@ class SizesApp{
 
   static final double r10 = 10.r;
   static final double r12 = 10.r;
+  static final double r38 = 38.r;
   
 
 }

@@ -18,11 +18,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(375, 667),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
         return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
           title: StringsApp.titleApp,
           theme: ThemesApp.light,
           translations: LocalizationApp(),
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           fallbackLocale: const Locale('en','US'),
           darkTheme: ThemesApp.dark,
           themeMode: ThemeMode.light,
-          initialRoute: RoutesApp.initialPage,
+          initialRoute: RoutesApp.splashScreen1,
           getPages: RoutesApp.getPages(),
         );
       },
