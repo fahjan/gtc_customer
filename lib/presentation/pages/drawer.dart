@@ -18,7 +18,7 @@ class MyDrawer extends GetView<DrawerController> {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        padding: EdgeInsets.only(top: 40),
+        padding: EdgeInsets.only(top:SizesApp.r40 ),
         children: [
           
           IconButton(
@@ -27,8 +27,8 @@ class MyDrawer extends GetView<DrawerController> {
             },
             icon: SvgPicture.asset(
               ImagesApp.back,
-              width: SizesApp.w24,
-              height: SizesApp.h24,
+              width: SizesApp.r24,
+              height: SizesApp.r24,
             ),
             alignment: Alignment.centerLeft,
           ),
@@ -60,41 +60,41 @@ class MyDrawer extends GetView<DrawerController> {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 30),
+            padding:  EdgeInsets.only(left:SizesApp.r30),
             child: Column(
               children: [
                 custom_ListTile(
-                    text: 'My_Order',
+                    text: 'my_order',
                     onTap: () {
                       Get.back();
                     }),
                 custom_ListTile(
-                    text: 'Favorite',
+                    text: 'favorite',
                     onTap: () {
                       Get.back();
                     }),
                 custom_ListTile(
-                    text: 'My_Profile',
+                    text: 'my_profile',
                     onTap: () {
                       Get.back();
                     }),
                 custom_ListTile(
-                    text: 'Delivary_addres',
+                    text: 'delivary_addres',
                     onTap: () {
                       Get.back();
                     }),
                 custom_ListTile(
-                    text: 'Payment_method',
+                    text: 'payment_method',
                     onTap: () {
                       Get.back();
                     }),
                 custom_ListTile(
-                    text: 'Vouchers_credit',
+                    text: 'vouchers_credit',
                     onTap: () {
                       Get.back();
                     }),
                 custom_ListTile(
-                    text: 'Notifications',
+                    text: 'notifications',
                     trailing: SvgPicture.asset(ImagesApp.counter),
                     onTap: () {
                       Get.back();
@@ -105,14 +105,14 @@ class MyDrawer extends GetView<DrawerController> {
                       Get.back();
                     }),
                 custom_ListTile(
-                    text: 'About_us',
+                    text: 'about_us',
                     onTap: () {
                       Get.back();
                     }),
                 ListTile(
                   title: Text(
                     textAlign: TextAlign.center,
-                    'Logout'.tr,
+                    'logout'.tr,
                     style: GoogleFonts.openSans(
                       fontSize: SizesApp.sp14,
                       color: ColorsApp.primary,

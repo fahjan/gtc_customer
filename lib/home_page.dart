@@ -4,8 +4,7 @@ import 'package:get/get.dart';
 import 'package:gtc_customer/presentation/pages/drawer.dart';
 import 'core/constants/images_app.dart';
 import 'core/constants/sizes_app.dart';
-
-final GlobalKey<ScaffoldState> _key = GlobalKey();
+import 'package:gtc_customer/presentation/controllers/drawer_controller.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,16 +12,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _key,
+      key: drawerkey,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            _key.currentState!.openDrawer();
+            drawerkey.currentState!.openDrawer();
           },
           icon: SvgPicture.asset(
             ImagesApp.menubar,
-            width: SizesApp.w23,
-            height: SizesApp.h23,
+            width: SizesApp.r23,
+            height: SizesApp.r23,
           ),
         ),
         title: const Text('Fast eat'),

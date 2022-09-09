@@ -20,7 +20,7 @@ class RoutesApp {
     name: drawer,
     page: () => const MyDrawer(),
     binding: DrawerBinding(),
-    fullscreenDialog: true,
+    // fullscreenDialog: true,
   ),
     ];
   }
