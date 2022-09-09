@@ -1,3 +1,15 @@
 Map<String, String> enUs = {
   'hello_world': 'Holle World',
+  'profile_name': 'aziz shrafi',
+  'email':'testemail@gmail.com',
+  'My_Order': 'My Order',
+  'Favorite' : 'Favorite',
+  'My_Profile' : 'My Profile',
+  'Delivary_addres' : 'Delivary addres',
+  'Payment_method' : 'Payment method',
+  'Vouchers_credit' : 'Vouchers & credit',
+  'Notifications' : 'Notifications',
+  'contact_us' : 'contact us',
+  'About_us' : 'About us',
+  'Logout' : 'Logout',
 };
