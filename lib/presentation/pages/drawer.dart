@@ -20,12 +20,7 @@ class MyDrawer extends GetView<DrawerController> {
       child: ListView(
         padding: EdgeInsets.only(top: 40),
         children: [
-          // DrawerHeader(
-          //   decoration: BoxDecoration(
-          //     color: ColorsApp.white,
-          //   ),
-          //   child:
-          // ),
+          
           IconButton(
             onPressed: () {
               Get.back();
