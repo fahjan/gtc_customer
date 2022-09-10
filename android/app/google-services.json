@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "794799995265",
+    "project_id": "customer-app-12bbc",
+    "storage_bucket": "customer-app-12bbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794799995265:android:e1fb257043d9d330965080",
+        "android_client_info": {
+          "package_name": "com.haiia.customer.gtc_customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794799995265-ij2qqo4kqvvn7saaadm9tan0ull5o9vn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwFiUcyR61hJoPE06fzKf01yT4stTeFw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794799995265-ij2qqo4kqvvn7saaadm9tan0ull5o9vn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
