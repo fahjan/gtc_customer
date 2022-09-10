@@ -1,13 +1,26 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'core/constants/strings_app.dart';
 import 'core/constants/themes_app.dart';
 import 'core/routes/routes_app.dart';
 
 import 'core/localizations/localization_app.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
+
+  OneSignal.shared.setAppId("ae0610e4-143f-4c31-b0c8-1bfbfd0f5210");
+
   runApp(const MyApp());
 }
 
