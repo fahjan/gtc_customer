@@ -7,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_customer/core/constants/colors_app.dart';
 import 'package:gtc_customer/core/constants/sizes_app.dart';
 
-class custom_ListTile extends StatelessWidget {
-  custom_ListTile({Key? key, required this.text, required this.onTap, this.trailing})
+class CustomListTile extends StatelessWidget {
+  CustomListTile({Key? key, required this.text, required this.onTap, this.trailing})
       : super(key: key);
   String text;
   VoidCallback onTap;

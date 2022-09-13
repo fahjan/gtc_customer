@@ -12,11 +12,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: drawerkey,
+      // key: drawerkey, (TODO : TEAN MEMBERS)
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            drawerkey.currentState!.openDrawer();
+            // drawerkey.currentState!.openDrawer(); (TODO : TEAN MEMBERS)
           },
           icon: SvgPicture.asset(
             ImagesApp.menubar,
