@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:gtc_customer/ui/pages/drawer/presentation/pages/drawer.dart';
+import 'package:gtc_customer/ui/widgets/logo_widget.dart';
 import 'core/constants/images_app.dart';
 import 'core/constants/sizes_app.dart';
-import 'package:gtc_customer/ui/pages/drawer/presentation/controllers/drawer_controller.dart';
-import 'package:gtc_customer/ui/widgets/logo_widget.dart';
+import 'ui/pages/drawer/presentation/controllers/drawer_controller.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends GetView<MyDrawerController> {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // key: drawerkey, (TODO : TEAN MEMBERS)
+      key: controller.drawerkey, //(TODO : TEAN MEMBERS)
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            // drawerkey.currentState!.openDrawer(); (TODO : TEAN MEMBERS)
+            controller.drawerkey.currentState!.openDrawer();// (TODO : TEAN MEMBERS)
           },
           icon: SvgPicture.asset(
             ImagesApp.menubar,

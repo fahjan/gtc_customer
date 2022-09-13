@@ -9,22 +9,17 @@ import 'package:gtc_customer/ui/pages/drawer/presentation/pages/drawer.dart';
 class RoutesApp {
   static const String initialPage = '/initialPage';
   static const String splashScreen1 = '/';
-  static const String drawer = '/drawer';
 
   static List<GetPage> getPages() {
     return <GetPage>[
       GetPage(
-        name: initialPage,
-        page: () => const HomePage(),
-      ),
-
+          name: initialPage,
+          page: () => const HomePage(),
+          binding: DrawerBinding()),
       GetPage(
-    name: drawer,
-    page: () => const MyDrawer(),
-    binding: DrawerBinding(),
-    // fullscreenDialog: true,
-  ),
-      GetPage(name: splashScreen1, page:()=> const SplashScreen1(),),
+        name: splashScreen1,
+        page: () => const SplashScreen1(),
+      ),
     ];
   }
 }
