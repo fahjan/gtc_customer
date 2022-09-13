@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:gtc_customer/presentation/pages/drawer.dart';
+import 'package:gtc_customer/ui/pages/drawer/presentation/pages/drawer.dart';
 import 'core/constants/images_app.dart';
 import 'core/constants/sizes_app.dart';
-import 'package:gtc_customer/presentation/controllers/drawer_controller.dart';
+import 'package:gtc_customer/ui/pages/drawer/presentation/controllers/drawer_controller.dart';
+import 'package:gtc_customer/ui/widgets/logo_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -27,8 +28,8 @@ class HomePage extends StatelessWidget {
         title: const Text('Fast eat'),
       ),
       drawer: const MyDrawer(),
-      body: Center(
-        child: Text('hello_world'.tr),
+      body: const Center(
+        child: LogoWidget(),
       ),
     );
   }

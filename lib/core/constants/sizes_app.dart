@@ -6,6 +6,7 @@ class SizesApp {
   static final double r64 = 64.r;
   static final double r24 = 24.r;
   static final double r40 = 40.r;
+  static final double r38 = 38.r;
   static final double r30 = 30.r;
   static final double r23 = 23.r;
   static final double r54 = 54.r;
@@ -17,7 +18,6 @@ class SizesApp {
   static final double sp12 = 12.sp;
   static final double sp16 = 16.sp;
 
-  
   static final double w11 = 11.w;
   static final double w24 = 24.w;
   static final double w23 = 23.w;
