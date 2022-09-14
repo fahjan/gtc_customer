@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           fallbackLocale: const Locale('en', 'US'),
           darkTheme: ThemesApp.dark,
           themeMode: ThemeMode.light,
-          initialRoute: RoutesApp.aboutUs,
+          initialRoute: RoutesApp.contactUs,
           getPages: RoutesApp.getPages(),
         );
       },
