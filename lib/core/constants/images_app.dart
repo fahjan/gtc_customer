@@ -16,9 +16,11 @@ class ImagesApp{
 
 
 
+
   static const String userImage = '${_baseImagePath}user_logo.png';
-  static const String menubar = '${_baseImagePath}menubar_icon.svg';
-  static const String back = '${_baseImagePath}back_icon.svg';
-  static const String counter = '${_baseImagePath}Notifications_number.svg';
+  static const String menubar = '${_baseSvgPath}menubar_icon.svg';
+  static const String back = '${_baseSvgPath}back_icon.svg';
+  static const String counter = '${_baseSvgPath}Notifications_number.svg';
+
 
 }
