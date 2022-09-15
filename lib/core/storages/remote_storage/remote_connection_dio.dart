@@ -16,12 +16,12 @@ class RemoteConnectionDio {
       ),
     );
 
-    // _dio.interceptors.add(PrettyDioLogger(
-    //     requestHeader: true,
-    //     responseHeader: false,
-    //     responseBody : false,
-    //     error: true,
-    //     maxWidth: 90));
+    _dio.interceptors.add(PrettyDioLogger(
+        requestHeader: true,
+        responseHeader: false,
+        responseBody : false,
+        error: true,
+        maxWidth: 90));
   }
 
   factory RemoteConnectionDio() {

@@ -4,5 +4,5 @@ import '../entities/data_entity.dart';
 
 abstract class RequestOrderRepositoriy {
   Future<Either<Failure, List<DataEntity>>> getListOfRestaurant();
-  makeOrder();
+  Future<Either<Failure, Unit>> makeOrder();
 }

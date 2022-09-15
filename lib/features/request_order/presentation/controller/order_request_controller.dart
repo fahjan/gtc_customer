@@ -12,9 +12,6 @@ import '../../domain/usecases/list_data_usecases.dart';
 import '../../domain/usecases/make_order_usecase.dart';
 
 class OrderRequestController extends GetxController {
-
-  
-
   final ListDataUsecases _listDataUsecase;
   final MakeOrderUsecase _makeOrderUsecase;
 
@@ -29,13 +26,14 @@ class OrderRequestController extends GetxController {
   @override
   void onInit() {
     //getListOfData();
-    _subscription =  Helpers.getConnectionListener((listen){
-      if(listen == ConnectivityResult.wifi){
+    _subscription = Helpers.getConnectionListener((listen) {
+      if (listen == ConnectivityResult.wifi) {
         getListOfData();
       }
     });
     super.onInit();
   }
+
   @override
   void onClose() {
     _subscription.cancel();
@@ -61,7 +59,15 @@ class OrderRequestController extends GetxController {
     });
   }
 
-  void makeOrder() {
-    _makeOrderUsecase.call();
+  Future<Unit?> makeOrder() async {
+    Either<Failure, Unit> response = await _makeOrderUsecase.call();
+
+     return response.fold((Failure failure) {
+      if (failure is ServerNotAvaiableFailure) {
+        message = 'ServerNotAvaiableFailure';
+      } else if (failure is InternetNotAvaiableFailure) {
+        message = 'InternetNotAvaiableFailure';
+      }
+    }, (r) => r);
   }
 }

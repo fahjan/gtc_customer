@@ -31,7 +31,17 @@ class RequestOrderRepositoriyImp extends RequestOrderRepositoriy {
   }
 
   @override
-  makeOrder() {
-    throw UnimplementedError();
+  Future<Either<Failure, Unit>> makeOrder() async {
+    if (await Helpers.isConnectedInternet()) {
+      try {
+          await  _remoteAbstract.makeOrder();
+
+        return right(unit);
+      } on ServerNotAvaiableException {
+        return left(ServerNotAvaiableFailure());
+      }
+    } else {
+      return left(InternetNotAvaiableFailure());
+    }
   }
 }

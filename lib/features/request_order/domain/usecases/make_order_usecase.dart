@@ -1,6 +1,9 @@
 
 
 
+import 'package:dartz/dartz.dart';
+import 'package:gtc_customer/core/exceptions/failure.dart';
+
 import '../repositories/request_order_repositoriy.dart';
 
 class MakeOrderUsecase {
@@ -8,7 +11,7 @@ class MakeOrderUsecase {
 
   MakeOrderUsecase(this._requestOrderRepositoriy);
 
-  call() {
-    return _requestOrderRepositoriy.makeOrder();
+  Future<Either<Failure, Unit>> call() async {
+    return await _requestOrderRepositoriy.makeOrder();
   }
 }

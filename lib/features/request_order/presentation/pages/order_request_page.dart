@@ -41,7 +41,7 @@ class OrderRequestPage extends GetView<OrderRequestController> {
                       ),
                     );
                     // TODO : make Order
-                    // controller.makeOrder();
+                    controller.makeOrder();
                   },
                   child: Card(
                     child: Stack(
