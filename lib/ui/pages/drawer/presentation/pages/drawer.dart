@@ -5,6 +5,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_customer/core/constants/colors_app.dart';
 import 'package:gtc_customer/core/constants/sizes_app.dart';
+import 'package:gtc_customer/core/constants/images_app.dart';
 import 'package:gtc_customer/ui/pages/drawer/presentation/widget/custom_list_tile.dart';
 
 class MyDrawer extends GetView<DrawerController> {
@@ -14,18 +15,17 @@ class MyDrawer extends GetView<DrawerController> {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        padding: EdgeInsets.only(top:SizesApp.r40 ),
+        padding: EdgeInsets.only(top: SizesApp.r40),
         children: [
-          
           IconButton(
             onPressed: () {
               Get.back();
             },
-            icon: Icon(Icons.arrow_back_ios,
-            color: ColorsApp.primary,
-            size: SizesApp.r24 ,
-              ),
-            
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: ColorsApp.primary,
+              size: SizesApp.r24,
+            ),
             alignment: Alignment.centerLeft,
           ),
           Column(
@@ -56,7 +56,7 @@ class MyDrawer extends GetView<DrawerController> {
             ],
           ),
           Padding(
-            padding:  EdgeInsets.only(left:SizesApp.r30),
+            padding: EdgeInsets.only(left: SizesApp.r30),
             child: Column(
               children: [
                 CustomListTile(
