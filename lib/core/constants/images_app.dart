@@ -15,4 +15,8 @@ class ImagesApp {
   static const String googlePath = '${_baseSvgPath}google.svg';
   static const String twitterPath = '${_baseSvgPath}twitter.svg';
   static const String instagramPath = '${_baseSvgPath}instagram.svg';
+  static const String userImage = '${_baseImagePath}user_logo.png';
+  static const String menubar = '${_baseSvgPath}menubar_icon.svg';
+  static const String back = '${_baseSvgPath}back_icon.svg';
+  static const String counter = '${_baseSvgPath}Notifications_number.svg';
 }

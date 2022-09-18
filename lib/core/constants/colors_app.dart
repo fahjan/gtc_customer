@@ -14,4 +14,5 @@ class ColorsApp {
   static late Color warning; // TODO (Team member): assign color
   static late Color info; // TODO (Team member): assign color
 
+  static const Color grey = Colors.grey;
 }

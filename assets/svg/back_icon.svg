@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.388" height="20.202" viewBox="0 0 11.388 20.202">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="11.388" height="20.202" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Symbol_3_26" data-name="Symbol 3 – 26" transform="translate(11.388 20.202) rotate(180)" clip-path="url(#clip-path)">
+    <g id="Symbol_10_1" data-name="Symbol 10 – 1" clip-path="url(#clip-path)">
+      <path id="Back_Chevron" data-name="Back Chevron" d="M.295,10.8a1,1,0,0,1,0-1.414L9.4.278a1,1,0,0,1,1.393-.02l.273.257a1,1,0,0,1,.026,1.429L3.067,10.091,11.1,18.2a1,1,0,0,1-.014,1.421l-.292.283a1,1,0,0,1-1.4-.01Z" transform="translate(11.389 20.187) rotate(180)" fill="#25b6c7"/>
+    </g>
+  </g>
+</svg>
