@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:gtc_customer/ui/widgets/logo_widget.dart';
 
 class HomePage extends StatelessWidget {

@@ -20,7 +20,7 @@ class RoutesApp {
       ),
       GetPage(
         name: aboutUs,
-        page: () => const AboutUsPage(),
+        page: () => AboutUsPage(),
       ),
     ];
   }
