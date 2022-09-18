@@ -8,7 +8,6 @@ import 'core/constants/sizes_app.dart';
 import 'ui/pages/drawer/presentation/controllers/drawer_controller.dart';
 import 'package:gtc_customer/ui/widgets/logo_widget.dart';
 
-
 class HomePage extends GetView<MyDrawerController> {
   const HomePage({super.key});
 
@@ -19,7 +18,8 @@ class HomePage extends GetView<MyDrawerController> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            controller.drawerkey.currentState!.openDrawer();// (TODO : TEAN MEMBERS)
+            controller.drawerkey.currentState!
+                .openDrawer(); // (TODO : TEAN MEMBERS)
           },
           icon: SvgPicture.asset(
             ImagesApp.menubar,
