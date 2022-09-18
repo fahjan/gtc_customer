@@ -1,9 +1,8 @@
 import 'package:get/get.dart';
 import 'package:gtc_customer/home_page.dart';
 import 'package:gtc_customer/ui/pages/aboutUs_page.dart';
-import 'package:gtc_customer/ui/pages/splash_screen1.dart';
 import 'package:gtc_customer/ui/pages/drawer/bindings/drawer_binding.dart';
-import 'package:gtc_customer/ui/pages/drawer/presentation/pages/drawer.dart';
+import 'package:gtc_customer/ui/pages/splash_screen1.dart';
 
 class RoutesApp {
   static const String initialPage = '/initialPage';
