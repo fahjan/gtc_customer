@@ -34,7 +34,7 @@ migrate_working_dir/
 .pub/
 /build/
 pubspec.lock
-
+*.lock
 # Web related
 lib/generated_plugin_registrant.dart
 
@@ -49,4 +49,4 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-.pubspec.lock
+

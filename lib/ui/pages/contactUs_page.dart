@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get_utils/get_utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_customer/core/constants/colors_app.dart';
 import 'package:gtc_customer/core/constants/images_app.dart';
@@ -26,7 +24,7 @@ class ContactUsPage extends StatelessWidget {
                     icon: Icon(
                       Icons.arrow_back_ios_new_rounded,
                       color: ColorsApp.primary,
-                      size: SizesApp.px30,
+                      size: SizesApp.r30,
                     ),
                   ),
                   SizedBox(width: SizesApp.w118),
