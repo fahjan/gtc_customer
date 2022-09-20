@@ -19,4 +19,12 @@ Map<String, String> enUs = {
   'notifications': 'Notifications',
   'contact_us': 'contact us',
   'logout': 'Logout',
+  'contact-us': 'Contact us',
+  'welcome': 'Welcome',
+  'send_us_email': 'send us Email',
+  'user_name': 'user name',
+  'mobile': 'mobile',
+  '_email': 'Email',
+  '_text': 'text',
+  'send': 'SEND',
 };

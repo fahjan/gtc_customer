@@ -19,4 +19,12 @@ Map<String, String> arEg = {
   'notifications': 'الاشعارات',
   'contact_us': 'تواصل معنا',
   'logout': 'تسجيل خروج',
+  'contact-us': 'اتصل بنا',
+  'welcome': 'مرحبا بك',
+  'send_us_email': 'أرسل لنا بريدًا إلكترونيًا',
+  'user_name': 'اسم المستخدم',
+  'mobile': 'الهاتف المحمول',
+  '_email': 'البريد الإلكتروني',
+  '_text': 'نص',
+  'send': 'إرسال',
 };

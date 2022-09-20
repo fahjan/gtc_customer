@@ -25,7 +25,7 @@ class MyDrawer extends GetView<DrawerController> {
             icon: Icon(
               Icons.arrow_back_ios,
               color: ColorsApp.primary,
-              size: SizesApp.r24,
+              size: SizesApp.r25,
             ),
             alignment: Alignment.centerLeft,
           ),

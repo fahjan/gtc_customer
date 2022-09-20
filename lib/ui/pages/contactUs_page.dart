@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get_utils/get_utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_customer/core/constants/colors_app.dart';
 import 'package:gtc_customer/core/constants/images_app.dart';
 import 'package:gtc_customer/core/constants/sizes_app.dart';
+import 'package:gtc_customer/core/constants/styles_app.dart';
+import 'package:gtc_customer/ui/widgets/appBar_widget.dart';
+import 'package:gtc_customer/ui/widgets/textformfild_widget.dart';
 
 class ContactUsPage extends StatelessWidget {
   const ContactUsPage({Key? key}) : super(key: key);
@@ -15,39 +20,16 @@ class ContactUsPage extends StatelessWidget {
         color: ColorsApp.white,
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.only(top: SizesApp.h14),
-              child: Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      color: ColorsApp.primary,
-                      size: SizesApp.r30,
-                    ),
-                  ),
-                  SizedBox(width: SizesApp.w118),
-                  Text(
-                    'Contact us',
-                    style: GoogleFonts.openSans(
-                      fontSize: SizesApp.sp20,
-                      fontWeight: FontWeight.w500,
-                      fontStyle: FontStyle.italic,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: SizesApp.h39),
+            AppBarWidget(title: 'contact-us'.tr),
+            SizedBox(height: SizesApp.h34),
             SvgPicture.asset(
               ImagesApp.logo1Path,
               height: SizesApp.h50,
               width: SizesApp.w82,
             ),
-            SizedBox(height: SizesApp.h12),
+            SizedBox(height: SizesApp.h10),
             Text(
-              'Welcome',
+              'welcome'.tr,
               style: GoogleFonts.openSans(
                 fontSize: SizesApp.sp32,
                 fontWeight: FontWeight.w500,
@@ -55,101 +37,53 @@ class ContactUsPage extends StatelessWidget {
               ),
             ),
             Text(
-              'send us Email',
+              'send_us_email'.tr,
               style: GoogleFonts.openSans(
                 fontSize: SizesApp.sp18,
                 color: ColorsApp.welcomeColor,
               ),
             ),
-            SizedBox(height: SizesApp.h33),
+            SizedBox(height: SizesApp.h25),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: SizesApp.w40),
+              padding: EdgeInsets.symmetric(horizontal: SizesApp.w30),
               child: Column(
                 children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: 'user name',
-                      hintStyle: GoogleFonts.openSans(
-                        fontSize: 14,
-                        color: ColorsApp.textFalidColor,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.person,
-                        color: ColorsApp.iconTextFalidColor,
-                        size: 26,
-                      ),
-                      fillColor: ColorsApp.falidColor,
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(SizesApp.r5)),
-                        borderSide: BorderSide.none,
-                      ),
-                    ),
+                  TextFormFiledWidget(
+                    hinttext: 'user_name'.tr,
+                    icon: Icons.person,
                   ),
                   SizedBox(height: SizesApp.h8),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: 'mobile',
-                      hintStyle: GoogleFonts.openSans(
-                        fontSize: 14,
-                        color: ColorsApp.textFalidColor,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.phone,
-                        color: ColorsApp.iconTextFalidColor,
-                        size: 26,
-                      ),
-                      fillColor: ColorsApp.falidColor,
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(SizesApp.r5)),
-                        borderSide: BorderSide.none,
-                      ),
-                    ),
+                  TextFormFiledWidget(
+                    hinttext: 'mobile'.tr,
+                    icon: Icons.phone,
                   ),
                   SizedBox(height: SizesApp.h8),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: 'email',
-                      hintStyle: GoogleFonts.openSans(
-                        fontSize: 14,
-                        color: ColorsApp.textFalidColor,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.email,
-                        color: ColorsApp.iconTextFalidColor,
-                        size: 26,
-                      ),
-                      fillColor: ColorsApp.falidColor,
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(SizesApp.r5)),
-                        borderSide: BorderSide.none,
-                      ),
-                    ),
+                  TextFormFiledWidget(
+                    hinttext: '_email'.tr,
+                    icon: Icons.email,
                   ),
                   SizedBox(height: SizesApp.h8),
-                  TextFormField(
-                    maxLines: 4,
-                    decoration: InputDecoration(
-                      hintText: 'text',
-                      hintStyle: GoogleFonts.openSans(
-                        fontSize: 14,
-                        color: ColorsApp.textFalidColor,
-                      ),
-                      fillColor: ColorsApp.falidColor,
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(SizesApp.r5)),
-                        borderSide: BorderSide.none,
+                  Container(
+                    padding: EdgeInsets.only(left: SizesApp.w15),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(SizesApp.r5),
+                      color: ColorsApp.falidColor,
+                    ),
+                    child: TextFormField(
+                      maxLines: 4,
+                      decoration: InputDecoration(
+                        hintText: '_text'.tr,
+                        hintStyle: StylesApp.body
+                            .copyWith(color: ColorsApp.textFalidColor),
+                        fillColor: ColorsApp.falidColor,
+                        filled: true,
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
-                  SizedBox(height: SizesApp.h45),
+                  SizedBox(height: SizesApp.h40),
                   Container(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
@@ -164,15 +98,13 @@ class ContactUsPage extends StatelessWidget {
                     ),
                     child: MaterialButton(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizesApp.w115, vertical: SizesApp.h10),
+                        horizontal: SizesApp.w115,
+                        vertical: SizesApp.h10,
+                      ),
                       onPressed: () {},
                       child: Text(
                         'SEND',
-                        style: GoogleFonts.openSans(
-                          fontSize: SizesApp.sp16,
-                          fontWeight: FontWeight.w500,
-                          color: ColorsApp.white,
-                        ),
+                        style: StylesApp.bodyButton,
                       ),
                     ),
                   ),
