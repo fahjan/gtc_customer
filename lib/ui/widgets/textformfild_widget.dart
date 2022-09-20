@@ -8,11 +8,10 @@ class TextFormFiledWidget extends StatelessWidget {
   const TextFormFiledWidget({
     Key? key,
     required this.hinttext,
-    // required this.line,
     required this.icon,
   }) : super(key: key);
   final String hinttext;
-  //final int line;
+
   final IconData icon;
 
   @override
@@ -24,7 +23,6 @@ class TextFormFiledWidget extends StatelessWidget {
         color: ColorsApp.falidColor,
       ),
       child: TextFormField(
-        //maxLines: line,
         decoration: InputDecoration(
           hintText: hinttext.tr,
           hintStyle: StylesApp.body.copyWith(color: ColorsApp.textFalidColor),
