@@ -16,11 +16,14 @@ class ContactUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: ColorsApp.white,
+      backgroundColor: ColorsApp.white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(SizesApp.h49),
+        child: AppBarWidget(title: 'contact-us'.tr),
+      ),
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            AppBarWidget(title: 'contact-us'.tr),
             SizedBox(height: SizesApp.h34),
             SvgPicture.asset(
               ImagesApp.logo1Path,
