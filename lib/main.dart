@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:gtc_customer/core/constants/strings_app.dart';
 import 'package:gtc_customer/core/constants/themes_app.dart';
 import 'package:gtc_customer/core/routes/routes_app.dart';
-
 import 'core/localizations/localization_app.dart';
+import '.env';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Stripe.publishableKey = Stripe.publishableKey;
+  await Stripe.instance.applySettings();
   runApp(const MyApp());
 }
 
