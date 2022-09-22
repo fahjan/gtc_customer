@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gtc_customer/core/constants/images_app.dart';
 import 'package:gtc_customer/core/constants/sizes_app.dart';
+import 'package:gtc_customer/ui/widgets/item_list_filter.dart';
 
 class SplashScreen1 extends StatelessWidget {
   const SplashScreen1({super.key});
@@ -33,6 +34,9 @@ class SplashScreen1 extends StatelessWidget {
               Image.asset(ImagesApp.vegetablesPath)
             ],
           ),
+          Column(children: [
+            getItem('title', Icon(Icons.filter), Color(0x000000))
+          ],)
         ],
       ),
     );
