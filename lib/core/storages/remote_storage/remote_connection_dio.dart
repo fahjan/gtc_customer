@@ -13,6 +13,10 @@ class RemoteConnectionDio extends RemoteConnectionsAbstract<Dio> {
       BaseOptions(
         baseUrl: StringsApp.baseUrl,
         contentType: StringsApp.contentType,
+        headers: {
+          'Authorization':
+              'Bearer 347_698jIL2Gyn3TCmn8hG9WrNhh5pmja1S38mZxMw6RtVHmJkHR8DK4DjNH0kfs',
+        },
       ),
     );
     _dio.interceptors.add(PrettyDioLogger());
