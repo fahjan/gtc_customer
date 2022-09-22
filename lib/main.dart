@@ -6,10 +6,11 @@ import 'package:gtc_customer/core/constants/strings_app.dart';
 import 'package:gtc_customer/core/constants/themes_app.dart';
 import 'package:gtc_customer/core/routes/routes_app.dart';
 import 'core/localizations/localization_app.dart';
-import '.env';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   Stripe.publishableKey = Stripe.publishableKey;
   await Stripe.instance.applySettings();
   runApp(const MyApp());
