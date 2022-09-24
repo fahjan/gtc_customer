@@ -1,7 +1,7 @@
 import 'package:gtc_customer/features/domain/Entities/register_entites/data_entity.dart';
 
 class DataModel extends DataEntity {
-  DataModel(Set<dynamic> set, {
+  DataModel({
     required super.id,
     required super.name,
     required super.username,
@@ -49,28 +49,28 @@ class DataModel extends DataEntity {
         */
   factory DataModel.fromJson(Map<String, dynamic> json) {
     return DataModel(
-      id : json['id'],
-      name : json['name'],
-      username : json['username'],
-      email : json['email'],
-      emailVerifiedAt : json['email_verified_at'],
-      mobile : json['mobile'],
-      createdAt : json['created_at'],
-      updatedAt : json['updated_at'],
-      deletedAt : json['deleted_at'],
-      address : json['address'],
-      longitude : json['longitude'],
-      latitude : json['latitude'],
-      stripeCustomerId : json['stripe_customer_id'],
-      avatar : json['avatar'],
-      onesignalplayerid : json['ONE_SIGNAL_PLAYER_ID'],
-      apiToken : json['api_token'],
-      customerApi : json['customer_api'],
-      viewed : json['viewed'],
-      social : json['social'],
-      socialId : json['social_id'],
-      locations : List.of(json['locations']),
-     );
+      id: json['id'],
+      name: json['name'],
+      username: json['username'],
+      email: json['email'],
+      emailVerifiedAt: json['email_verified_at'],
+      mobile: json['mobile'],
+      createdAt: json['created_at'],
+      updatedAt: json['updated_at'],
+      deletedAt: json['deleted_at'],
+      address: json['address'],
+      longitude: json['longitude'],
+      latitude: json['latitude'],
+      stripeCustomerId: json['stripe_customer_id'],
+      avatar: json['avatar'],
+      onesignalplayerid: json['ONE_SIGNAL_PLAYER_ID'],
+      apiToken: json['api_token'],
+      customerApi: json['customer_api'],
+      viewed: json['viewed'],
+      social: json['social'],
+      socialId: json['social_id'],
+      locations: List.of(json['locations']),
+    );
   }
 
   Map<String, dynamic> toJson() {
@@ -89,7 +89,7 @@ class DataModel extends DataEntity {
     data['latitude'] = super.latitude;
     data['stripe_customer_id'] = super.stripeCustomerId;
     data['avatar'] = super.avatar;
-    data['ONE_SIGNAL_PLAYER_ID'] = super.oNESIGNALPLAYERID;
+    data['ONE_SIGNAL_PLAYER_ID'] = super.onesignalplayerid;
     data['api_token'] = super.apiToken;
     data['customer_api'] = super.customerApi;
     data['viewed'] = super.viewed;
