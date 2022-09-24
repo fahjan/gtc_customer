@@ -4,7 +4,7 @@ import 'package:gtc_customer/features/data/dataseorse/remote/remote_connections_
 import 'package:gtc_customer/features/data/Model/base_register_model.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-class RegisterDio extends RemoteConnectionsAbstract<Dio> {
+class RegisterDio{
   late Dio _dio;
 
   static RegisterDio? _instance;
@@ -34,18 +34,5 @@ class RegisterDio extends RemoteConnectionsAbstract<Dio> {
 
   @override
   // TODO: implement remoteConnection
-  Dio get remoteConnection => _dio;
-
-  @override
-  Future<BaseRegisterModel> register(String name, String email, String mobile,
-      String password, String passwordConfirmation) async {
-    var rep = await _dio.get('register', queryParameters: {
-      'name': name,
-      'email': email,
-      'mobile': mobile,
-      'password_confirmation': passwordConfirmation,
-      'password': password,
-    });
-    return rep.data;
-  }
+  Dio get dio => _dio;
 }

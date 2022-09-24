@@ -6,6 +6,7 @@ import 'package:gtc_customer/core/constants/themes_app.dart';
 import 'package:gtc_customer/core/routes/routes_app.dart';
 
 import 'core/localizations/localization_app.dart';
+import 'features/Presentation/register_page/register_page_state.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
           fallbackLocale: const Locale('en','US'),
           darkTheme: ThemesApp.dark,
           themeMode: ThemeMode.light,
-          initialRoute: RoutesApp.splashScreen1,
+          initialBinding: RegisterBinding(),
+          initialRoute: RoutesApp.register,
           getPages: RoutesApp.getPages(),
         );
       },

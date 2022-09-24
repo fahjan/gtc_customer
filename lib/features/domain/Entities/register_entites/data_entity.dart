@@ -24,7 +24,6 @@ class DataEntity extends Equatable {
     required this.socialId,
     required this.locations,
   });
-
   int id;
   String name;
   dynamic username;

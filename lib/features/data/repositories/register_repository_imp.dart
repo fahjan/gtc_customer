@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:get/get.dart';
 import 'package:gtc_customer/core/exceptions/custom_exceptions.dart';
 import 'package:gtc_customer/core/exceptions/failure.dart';
 import 'package:gtc_customer/core/helper/helper_app.dart';
@@ -20,8 +19,9 @@ class RegisterRepositoryImp extends RegisterRepository {
     if (await HelperApp.isConnected()) {
       // TODO : FETCH FROM PHOTO API
       try {
-        BaseEntityRegister baseWeatherModel;
-        throw Exception();
+        BaseEntityRegister baseWeatherModel = await _remoteConnectionsAbstract
+            .register(name, email, mobile, password, passwordConfirmation);
+        return right(baseWeatherModel);
       } on ServerNotAvailableException {
         return left(ServerNotAvailableFailure('weather server is down'));
       }
