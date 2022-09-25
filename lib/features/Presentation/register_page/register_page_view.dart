@@ -10,15 +10,17 @@ class RegisterPage extends GetView<RegisterController> {
     // replace data for text field
     // call the register method on clicked button
     controller.register(
-        "test12", 'test657@test.com', '0593544141', '123456', '123456');
+        "test12", 'test755@test.com', '0599999909', '123456', '123456');
     return Scaffold(
       body: Obx(() {
-        if (controller.isLoading.isTrue) {
+        if (controller.isLoading.isFalse) {
+          return Stack(children: [
+            Text(controller.message.value),
+          ]);
+        } else {
           return const Center(
             child: CircularProgressIndicator(),
           );
-        } else {
-          return Text(controller.baseEntityRegister.value.message);
         }
       }),
     );

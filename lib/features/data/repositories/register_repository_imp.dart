@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:gtc_customer/core/exceptions/custom_exceptions.dart';
 import 'package:gtc_customer/core/exceptions/failure.dart';
 import 'package:gtc_customer/core/helper/helper_app.dart';
@@ -11,10 +12,12 @@ class RegisterRepositoryImp extends RegisterRepository {
 
   RegisterRepositoryImp(this._remoteConnectionsAbstract);
 
-
   @override
-  Future<Either<Failure, BaseEntityRegister>> register(String name,
-      String email, String mobile, String password,
+  Future<Either<Failure, BaseEntityRegister>> register(
+      String name,
+      String email,
+      String mobile,
+      String password,
       String passwordConfirmation) async {
     if (await HelperApp.isConnected()) {
       // TODO : FETCH FROM PHOTO API
@@ -22,7 +25,8 @@ class RegisterRepositoryImp extends RegisterRepository {
         BaseEntityRegister baseWeatherModel = await _remoteConnectionsAbstract
             .register(name, email, mobile, password, passwordConfirmation);
         return right(baseWeatherModel);
-      } on ServerNotAvailableException {
+      }
+      on ServerNotAvailableException {
         return left(ServerNotAvailableFailure('weather server is down'));
       }
     } else {

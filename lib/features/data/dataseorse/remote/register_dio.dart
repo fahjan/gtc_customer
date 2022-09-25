@@ -14,6 +14,9 @@ class RegisterDio{
       BaseOptions(
         baseUrl: StringsApp.baseUrl,
         contentType: StringsApp.contentType,
+        headers:{
+          'Accept':StringsApp.accept
+        }
       ),
     );
     _dio.interceptors.add(PrettyDioLogger());

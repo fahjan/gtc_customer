@@ -5,7 +5,7 @@ import 'package:gtc_customer/features/domain/Entities/register_entites/base_enti
 import 'package:gtc_customer/features/domain/usecases/register_usecase.dart';
 
 class RegisterController extends GetxController {
-  RegisterUescase _registerUescase;
+  final RegisterUescase _registerUescase;
 
   RegisterController(this._registerUescase);
 
@@ -21,7 +21,9 @@ class RegisterController extends GetxController {
     String passwordConfirmation,
   ) async {
     isLoading.value = true;
-    Either<Failure, BaseEntityRegister> resp = await _registerUescase.call(
+    Either<Failure, BaseEntityRegister> resp =
+
+    await _registerUescase.call(
       name,
       email,
       mobile,
@@ -29,10 +31,10 @@ class RegisterController extends GetxController {
       passwordConfirmation,
     );
     resp.fold((l) {
-      this.message.value = l.message;
+      message.value = l.message;
       isLoading.value = false;
     }, (r) {
-      this.baseEntityRegister.value = r;
+      baseEntityRegister.value = r;
       isLoading.value = false;
     });
   }
