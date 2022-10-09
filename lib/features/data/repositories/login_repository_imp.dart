@@ -6,7 +6,6 @@ import 'package:gtc_customer/features/data/dataseorse/remote/remote_connections_
 import 'package:gtc_customer/features/data/model/login_model/Base_model_login.dart';
 import 'package:gtc_customer/features/domain/Entities/login_entites/Base_entity_login.dart';
 import 'package:gtc_customer/features/domain/repositories/login_rep.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 class LoginRepositoryImp extends LoginRepository {
   RemoteConnectionsAbstract _remoteConnectionsAbstract;
@@ -22,8 +21,8 @@ class LoginRepositoryImp extends LoginRepository {
     if (await HelperApp.isConnected()) {
       // TODO : FETCH FROM PHOTO API
       try {
-        BaseModelLogin baseWeatherModel = await _remoteConnectionsAbstract.login(email, password, onesignalId);
-        return right(baseWeatherModel);
+        BaseModelLogin  baseModelLogin= await _remoteConnectionsAbstract.login(email, password, onesignalId);
+        return right(baseModelLogin);
       } on ServerNotAvailableException {
         return left(ServerNotAvailableFailure('weather server is down'));
       }

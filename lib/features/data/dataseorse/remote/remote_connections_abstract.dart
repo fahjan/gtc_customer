@@ -1,8 +1,7 @@
-import 'package:dio/dio.dart';
 import 'package:gtc_customer/features/data/Model/base_register_model.dart';
 import 'package:gtc_customer/features/data/dataseorse/remote/register_dio.dart';
 import 'package:gtc_customer/features/data/model/login_model/Base_model_login.dart';
-import 'package:gtc_customer/features/domain/Entities/login_entites/base_entity_login.dart';
+import 'package:gtc_customer/features/data/model/register_model/base_register_model.dart';
 
 abstract class RemoteConnectionsAbstract {
   Future<BaseRegisterModel> register(String name, String email, String mobile,
