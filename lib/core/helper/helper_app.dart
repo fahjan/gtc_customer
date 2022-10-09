@@ -1,9 +1,10 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
+import 'dart:async';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 class HelperApp {
-  static Future<bool> isConnected() async {
-    var connectivityResult = await (Connectivity().checkConnectivity());
-    return (connectivityResult == ConnectivityResult.mobile ||
-        connectivityResult == ConnectivityResult.wifi);
+  static Future<bool> isConnected(
+  ) async {
+    final bool isConnecteds = await InternetConnectionChecker().hasConnection;
+    return isConnecteds;
   }
 }
