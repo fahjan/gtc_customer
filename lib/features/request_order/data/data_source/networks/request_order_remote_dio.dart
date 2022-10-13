@@ -35,31 +35,41 @@ class RequestOrderRemoteDio extends RequestOrderRemoteAbstract {
     debugPrint(deviceState?.pushToken);
 
     FormData formData = FormData.fromMap({
-        'merchant_id': 1,
-        'service_id': 1,
-        'location_id': 251,
-        'delivery_at': 'ASAP',
-        'rider_tip': 0,
-        'price': 35,
-        'payment_type': 'card',
-        'onesignal_token':
-            "338_NoxicATNzZ2KHkPnxn0ifrvo3mm8UK3YMiqD4Sclgzt7qEOU56zCYEKqGblz",
-        'delivery_note': '',
-        'deliveryFee ': 10.5,
-        'items': {}
-      });
+      'merchant_id': 50,
+      'service_id': 2,
+      'location_id': 251,
+      'delivery_at': 'ASAP',
+      'rider_tip': 2,
+      'price': 35,
+      'payment_type': 'card',
+      'payment_method': 'vise',
+      'onesignal_token': deviceState?.pushToken,
+      'delivery_note': '',
+      'deliveryFee ': 10.5,
+      'items': '''
+      [
+        {
+          "item_id": 934,
+          "price": 45,
+          "size_id": 20,
+          "count": 1,
+          "notes": "Notes ",
+          "addon": "[]"
+        }
+      ]''',
+    });
 
-  dioResponse.Response<dynamic> response = await _remote.dio.post(
-      '/order',
+    var response = await _remote.dio.post(
+      'orders',
       // options: Options(contentType: Headers.formUrlEncodedContentType),
       data: formData,
     );
 
-      if (response.statusCode != 200) {
-      throw ServerNotAvaiableException();
+    if (response.statusCode != 200) {
+      // throw ServerNotAvaiableException();
+      debugPrint('-----------------');
     }
 
     return unit;
-
   }
 }

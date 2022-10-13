@@ -11,15 +11,19 @@ class RemoteConnectionDio {
   RemoteConnectionDio._() {
     _dio = Dio(
       BaseOptions(
-        baseUrl: StringsApp.baseUrl,
-        contentType: StringsApp.contentType,
-      ),
+          baseUrl: StringsApp.baseUrl,
+          contentType: StringsApp.contentType,
+          headers: {
+            'Authorization':
+                'Bearer 362_ZJC2BR66lAdqCuMUKUVo0J66BHPpvYZ0FWLHnvxjmXpUfAeF3XUVYMBLU0uq',
+            'Accept': 'application/json',
+          }),
     );
 
     _dio.interceptors.add(PrettyDioLogger(
         requestHeader: true,
-        responseHeader: false,
-        responseBody : false,
+        responseHeader: true,
+        responseBody: true,
         error: true,
         maxWidth: 90));
   }
