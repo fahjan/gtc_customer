@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:gtc_customer/core/constants/styles_app.dart';
-import 'package:gtc_customer/ui/controllers/aboutUs_controller.dart';
 import 'package:gtc_customer/core/constants/colors_app.dart';
 import 'package:gtc_customer/core/constants/images_app.dart';
 import 'package:gtc_customer/core/constants/sizes_app.dart';
+import 'package:gtc_customer/core/constants/styles_app.dart';
+import 'package:gtc_customer/ui/controllers/aboutUs_controller.dart';
 import 'package:gtc_customer/ui/widgets/appBar_widget.dart';
 import 'package:gtc_customer/ui/widgets/inkWell_widget.dart';
 import 'package:readmore/readmore.dart';

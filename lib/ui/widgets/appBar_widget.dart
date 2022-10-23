@@ -28,7 +28,7 @@ class AppBarWidget extends StatelessWidget {
       ),
       backgroundColor: ColorsApp.white,
       centerTitle: true,
-      elevation: 0,
+      elevation: SizesApp.r0,
     );
   }
 }

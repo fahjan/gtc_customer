@@ -14,4 +14,9 @@ class StylesApp {
     fontSize: SizesApp.sp14,
     color: ColorsApp.textColor,
   );
+  static final bodyButton = GoogleFonts.openSans(
+    fontSize: SizesApp.sp16,
+    color: ColorsApp.white,
+    fontWeight: FontWeight.w500,
+  );
 }
