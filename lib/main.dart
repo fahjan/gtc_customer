@@ -5,6 +5,7 @@ import 'package:gtc_customer/core/constants/strings_app.dart';
 import 'package:gtc_customer/core/constants/themes_app.dart';
 import 'package:gtc_customer/core/routes/routes_app.dart';
 import 'package:gtc_customer/features/presentation/login_page/login_bainding.dart';
+import 'package:gtc_customer/features/presentation/marchent/marchent_binding.dart';
 
 import 'core/localizations/localization_app.dart';
 import 'features/Presentation/register_page/register_page_state.dart';
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
           fallbackLocale: const Locale('en','US'),
           darkTheme: ThemesApp.dark,
           themeMode: ThemeMode.light,
-          initialBinding: LoginBainding(),
-          initialRoute: RoutesApp.login,
+          initialBinding: MarchentBinding(),
+          initialRoute: RoutesApp.marchent,
           getPages: RoutesApp.getPages(),
         );
       },

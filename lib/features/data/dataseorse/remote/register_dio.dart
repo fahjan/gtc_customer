@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:gtc_customer/core/constants/strings_app.dart';
 import 'package:gtc_customer/features/data/dataseorse/remote/remote_connections_abstract.dart';
-import 'package:gtc_customer/features/data/Model/base_register_model.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class RegisterDio{

@@ -21,7 +21,7 @@ class LoginRepositoryImp extends LoginRepository {
     if (await HelperApp.isConnected()) {
       // TODO : FETCH FROM PHOTO API
       try {
-        BaseModelLogin  baseModelLogin= await _remoteConnectionsAbstract.login(email, password, onesignalId);
+        BaseEntityLogin  baseModelLogin= await _remoteConnectionsAbstract.login(email, password, onesignalId);
         return right(baseModelLogin);
       } on ServerNotAvailableException {
         return left(ServerNotAvailableFailure('weather server is down'));

@@ -1,5 +1,4 @@
 
-import 'package:gtc_customer/features/data/Model/errors_model.dart';
 import 'package:gtc_customer/features/data/model/register_model/data_model.dart';
 import 'package:gtc_customer/features/data/model/register_model/errors_model.dart';
 import 'package:gtc_customer/features/domain/Entities/register_entites/base_entity_register.dart';

@@ -1,17 +1,16 @@
-
-
 import 'package:get/get.dart';
 import 'package:gtc_customer/features/Presentation/register_page/register_page_view.dart';
 import 'package:gtc_customer/features/presentation/login_page/login_page.dart';
+import 'package:gtc_customer/features/presentation/marchent/marchent_view.dart';
 import 'package:gtc_customer/home_page.dart';
 import 'package:gtc_customer/ui/pages/splash_screen1.dart';
 
-class RoutesApp{
-
+class RoutesApp {
   static const String initialPage = '/initialPage';
   static const String splashScreen1 = '/';
   static const String register = '/register';
   static const String login = '/login';
+  static const String marchent = '/marchent';
 
   static List<GetPage> getPages() {
     return <GetPage>[
@@ -26,11 +25,11 @@ class RoutesApp{
       GetPage(
         name: register,
         page: () => RegisterPage(),
-      ),GetPage(
-        name: login,
-        page: () => LoginPage(),
+      ),
+      GetPage(
+        name: marchent,
+        page: () => MarchentPage(),
       ),
     ];
   }
 }
-

@@ -1,4 +1,3 @@
-import 'package:gtc_customer/features/data/Model/errors_model.dart';
 import 'package:gtc_customer/features/domain/Entities/register_entites/errors_entity.dart';
 
 class ErrorsModel extends ErrorsEntity {
